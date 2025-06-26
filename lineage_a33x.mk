@@ -29,11 +29,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Charger
-PRODUCT_PACKAGES += \
-    charger_res_images
-
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/samsung/a33x/recovery/root,recovery/root)
+## Boot Animation
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_a33x
